@@ -1,0 +1,70 @@
+﻿<!--book demo modal start-->
+<div id="myModal" class="modal fade" ng-controller="bookDemoController">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" id="bookDemoCloseBTn" class="close close_btn" data-dismiss="modal" aria-hidden="true"><img src="assets/images/cross_btn.png" alt=""></button>
+            <div class="modal_inr clearfix">
+                <form>
+                    <div class="modal_left">
+                        <h3>To discuss a collaborative <span class="blue_heading">partnership</span></h3>
+                        <p style="text-align:justify">Enter your details below and a member of our team will contact you shortly to arrange a time. You will also receive the InvolvEd Information Brochure, this details our services.</p>
+                        <div class="member_frm">
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-6">
+                                    <label>Name</label>
+                                    <input id="name" class="name_fld" type="text" maxlength="50" ]>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <label>Job Title</label>
+                                    <input id="job_title" class="name_fld" type="text" maxlength="50">
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <label>Email</label>
+                                    <input id="email" class="name_fld" type="text">
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <label>Contact Number</label>
+                                    <input id="contact_no" class="name_fld" type="text" maxlength="11">
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <label>School</label>
+                                    <input id="school" class="name_fld" type="text" maxlength="50">
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <label>Postcode</label>
+                                    <input id="postcode" class="name_fld" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-lm-6 book_demo_agree" style="padding-top: 7% !important;padding-left: 3%;">By clicking Book Now, you agree to being contacted by InvolvEdTech.</div>
+                    </div>
+                    <div class="modal_right">
+                        <div class="blnk_div">
+                            <h4>Select a date</h4>
+                            <div class="clander_outr">
+                                <div id="datepicker"></div>
+                                <!--<img src="assets/images/calender.png" alt="">-->
+                            </div>
+                            <input type="reset" id="bookDemoReset" style="display:none">
+                            <a id="bookDemoSubmit" class="global_btn btn-default" data-toggle="modal" href="javascript:void(0)" ng-click="bookDemoSubmit()">Book Now</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-->
+
+<!--success msg pop up-->
+<input id="successMsg1" type="button" data-toggle="modal" data-target="#successMsg_modal1" style="display:none">
+<div class="modal fade attach_photo" id="successMsg_modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body clearfix">
+                <span>{{bookDemoMessage}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--success msg pop up end-->
